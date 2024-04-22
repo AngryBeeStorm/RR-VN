@@ -1,0 +1,24 @@
+﻿I'm sorry, but an uncaught exception occurred.
+
+While running game code:
+  File "game/script.rpy", line 82, in script
+    e "Haa, as if my first time visiting the sanctuary wasn't enough to handle..."
+Exception: Sayer 'e' is not defined.
+
+-- Full Traceback ------------------------------------------------------------
+
+Full traceback:
+  File "game/script.rpy", line 82, in script
+    e "Haa, as if my first time visiting the sanctuary wasn't enough to handle..."
+  File "E:\software\renpy-8.2.1-sdk\renpy\ast.py", line 2557, in execute
+    Say.execute(self)
+  File "E:\software\renpy-8.2.1-sdk\renpy\ast.py", line 575, in execute
+    who = eval_who(self.who, self.who_fast)
+  File "E:\software\renpy-8.2.1-sdk\renpy\ast.py", line 464, in eval_who
+    raise Exception("Sayer '%s' is not defined." % who)
+Exception: Sayer 'e' is not defined.
+
+Windows-10-10.0.19045 AMD64
+Ren'Py 8.2.1.24030407
+Playing With Renpy 1.0
+Tue Apr 16 23:20:51 2024
