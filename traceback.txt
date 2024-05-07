@@ -1,24 +1,32 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/script.rpy", line 82, in script
-    e "Haa, as if my first time visiting the sanctuary wasn't enough to handle..."
-Exception: Sayer 'e' is not defined.
+  File "game/script.rpy", line 264, in script
+    show felix default at offscreen_left with move
+  File "game/script.rpy", line 264, in <module>
+    show felix default at offscreen_left with move
+NameError: name 'offscreen_left' is not defined
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/script.rpy", line 82, in script
-    e "Haa, as if my first time visiting the sanctuary wasn't enough to handle..."
-  File "E:\software\renpy-8.2.1-sdk\renpy\ast.py", line 2557, in execute
-    Say.execute(self)
-  File "E:\software\renpy-8.2.1-sdk\renpy\ast.py", line 575, in execute
-    who = eval_who(self.who, self.who_fast)
-  File "E:\software\renpy-8.2.1-sdk\renpy\ast.py", line 464, in eval_who
-    raise Exception("Sayer '%s' is not defined." % who)
-Exception: Sayer 'e' is not defined.
+  File "game/script.rpy", line 264, in script
+    show felix default at offscreen_left with move
+  File "E:\software\renpy-8.2.1-sdk\renpy\ast.py", line 1113, in execute
+    show_imspec(self.imspec, atl=getattr(self, "atl", None))
+  File "E:\software\renpy-8.2.1-sdk\renpy\ast.py", line 1072, in show_imspec
+    at_list = [ renpy.python.py_eval(i) for i in at_list ]
+  File "E:\software\renpy-8.2.1-sdk\renpy\ast.py", line 1072, in <listcomp>
+    at_list = [ renpy.python.py_eval(i) for i in at_list ]
+  File "E:\software\renpy-8.2.1-sdk\renpy\python.py", line 1209, in py_eval
+    return py_eval_bytecode(code, globals, locals)
+  File "E:\software\renpy-8.2.1-sdk\renpy\python.py", line 1202, in py_eval_bytecode
+    return eval(bytecode, globals, locals)
+  File "game/script.rpy", line 264, in <module>
+    show felix default at offscreen_left with move
+NameError: name 'offscreen_left' is not defined
 
 Windows-10-10.0.19045 AMD64
 Ren'Py 8.2.1.24030407
 Playing With Renpy 1.0
-Tue Apr 16 23:20:51 2024
+Sun Apr 28 19:38:42 2024
