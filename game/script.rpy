@@ -8,6 +8,8 @@ define j = Character("Johan")
 define t = Character("Tian")
 
 
+    
+
 # NVL characters are used for the phone texting
 #define n_nvl = Character("Jonathan", kind=nvl, callback=Phone_ReceiveSound)
 #define e_nvl = Character("Erika", kind=nvl, image="mock-mc2", callback=Phone_SendSound)
@@ -16,6 +18,9 @@ define t = Character("Tian")
 #define config.nvl_adv_transition = Dissolve(0.3)
 
 init: 
+    
+
+
     $ bottom_left = Position(xpos= -0.03, ypos=1.35, xanchor='left')
     $ left = Position(xpos=0.2, xanchor='left')
     $ right = Position(xpos=0.9, xanchor='right')
@@ -56,7 +61,7 @@ init:
     #image tian default= im.Scale("placeholders/tian default.png")#, 465, 958)
 
     python:
-    
+        #import missions
         import math
 
         class Shaker(object):
@@ -128,6 +133,10 @@ label start:
     e "Shouldn't be too difficult, considering I'm still a rookie. Hope the higher ups have mercy."
 
     "I finish cleaning the barrel and making sure everything is in working order."
+    call screen missions_screen#(main_missions)
+
+
+    
 
     e "Still, can't risk going at it unprepared."
     e "Well, it's about time I got going."

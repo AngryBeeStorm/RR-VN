@@ -1,32 +1,66 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/script.rpy", line 264, in script
-    show felix default at offscreen_left with move
-  File "game/script.rpy", line 264, in <module>
-    show felix default at offscreen_left with move
-NameError: name 'offscreen_left' is not defined
+  File "game/script.rpy", line 136, in script
+    call screen missions_screen#(main_missions)
+  File "renpy/common/000statements.rpy", line 671, in execute_call_screen
+    store._return = renpy.call_screen(name, *args, **kwargs)
+  File "game/missions.rpy", line 35, in execute
+    screen mission_detail_screen():
+  File "game/missions.rpy", line 35, in execute
+    screen mission_detail_screen():
+  File "game/missions.rpy", line 37, in execute
+    $ mission_action = Jump(selected_mission['mission_label'])
+  File "game/missions.rpy", line 37, in <module>
+    $ mission_action = Jump(selected_mission['mission_label'])
+KeyError: 'mission_label'
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/script.rpy", line 264, in script
-    show felix default at offscreen_left with move
-  File "E:\software\renpy-8.2.1-sdk\renpy\ast.py", line 1113, in execute
-    show_imspec(self.imspec, atl=getattr(self, "atl", None))
-  File "E:\software\renpy-8.2.1-sdk\renpy\ast.py", line 1072, in show_imspec
-    at_list = [ renpy.python.py_eval(i) for i in at_list ]
-  File "E:\software\renpy-8.2.1-sdk\renpy\ast.py", line 1072, in <listcomp>
-    at_list = [ renpy.python.py_eval(i) for i in at_list ]
-  File "E:\software\renpy-8.2.1-sdk\renpy\python.py", line 1209, in py_eval
-    return py_eval_bytecode(code, globals, locals)
-  File "E:\software\renpy-8.2.1-sdk\renpy\python.py", line 1202, in py_eval_bytecode
-    return eval(bytecode, globals, locals)
-  File "game/script.rpy", line 264, in <module>
-    show felix default at offscreen_left with move
-NameError: name 'offscreen_left' is not defined
+  File "game/script.rpy", line 136, in script
+    call screen missions_screen#(main_missions)
+  File "E:\software\renpy-8.2.1-sdk\renpy\ast.py", line 1968, in execute
+    self.call("execute")
+  File "E:\software\renpy-8.2.1-sdk\renpy\ast.py", line 1950, in call
+    return renpy.statements.call(method, parsed, *args, **kwargs)
+  File "E:\software\renpy-8.2.1-sdk\renpy\statements.py", line 349, in call
+    return method(parsed, *args, **kwargs)
+  File "renpy/common/000statements.rpy", line 671, in execute_call_screen
+    store._return = renpy.call_screen(name, *args, **kwargs)
+  File "E:\software\renpy-8.2.1-sdk\renpy\exports.py", line 3413, in call_screen
+    rv = renpy.ui.interact(mouse="screen", type="screen", roll_forward=roll_forward)
+  File "E:\software\renpy-8.2.1-sdk\renpy\ui.py", line 301, in interact
+    rv = renpy.game.interface.interact(roll_forward=roll_forward, **kwargs)
+  File "E:\software\renpy-8.2.1-sdk\renpy\display\core.py", line 2165, in interact
+    repeat, rv = self.interact_core(preloads=preloads, trans_pause=trans_pause, pause=pause, pause_start=pause_start, pause_modal=pause_modal, **kwargs) # type: ignore
+  File "E:\software\renpy-8.2.1-sdk\renpy\display\core.py", line 2687, in interact_core
+    root_widget.visit_all(lambda d : d.per_interact())
+  File "E:\software\renpy-8.2.1-sdk\renpy\display\displayable.py", line 431, in visit_all
+    d.visit_all(callback, seen)
+  File "E:\software\renpy-8.2.1-sdk\renpy\display\displayable.py", line 431, in visit_all
+    d.visit_all(callback, seen)
+  File "E:\software\renpy-8.2.1-sdk\renpy\display\displayable.py", line 431, in visit_all
+    d.visit_all(callback, seen)
+  File "E:\software\renpy-8.2.1-sdk\renpy\display\screen.py", line 480, in visit_all
+    callback(self)
+  File "E:\software\renpy-8.2.1-sdk\renpy\display\core.py", line 2687, in <lambda>
+    root_widget.visit_all(lambda d : d.per_interact())
+  File "E:\software\renpy-8.2.1-sdk\renpy\display\screen.py", line 491, in per_interact
+    self.update()
+  File "E:\software\renpy-8.2.1-sdk\renpy\display\screen.py", line 697, in update
+    self.screen.function(**self.scope)
+  File "game/missions.rpy", line 35, in execute
+    screen mission_detail_screen():
+  File "game/missions.rpy", line 35, in execute
+    screen mission_detail_screen():
+  File "game/missions.rpy", line 37, in execute
+    $ mission_action = Jump(selected_mission['mission_label'])
+  File "game/missions.rpy", line 37, in <module>
+    $ mission_action = Jump(selected_mission['mission_label'])
+KeyError: 'mission_label'
 
 Windows-10-10.0.19045 AMD64
 Ren'Py 8.2.1.24030407
 Playing With Renpy 1.0
-Sun Apr 28 19:38:42 2024
+Tue May  7 22:05:32 2024

@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/script.rpy", line 247: Line is indented, but the preceding say statement statement does not expect a block. Please check this line's indentation. You may have forgotten a colon (:).
-    menu:
-    ^
+File "game/missions.rpy", line 54: end of line expected.
+    idle_background im.Scale("images/phone_received_icon.png", 200, 200), yalign 0.7
+                                                                        ^
 
 Ren'Py Version: Ren'Py 8.2.1.24030407
-Sun Apr 28 19:16:06 2024
+Tue May  7 23:38:12 2024
